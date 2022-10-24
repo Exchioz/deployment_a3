@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Icon -->
-	<link rel="shortcut icon" href="{{ url_for('static', filename='/images/icon.ico') }}">
+	<link rel="shortcut icon" href={{ url_for('static', filename='/images/icon.ico') }}>
 	
 	<!-- CSS -->
 	<link rel="stylesheet" href={{ url_for('static', filename='/css/bootstrap.min.css') }} type="text/css">
@@ -59,18 +59,8 @@
 			<br>
 			<!-- Tombol Mulai -->
 			<nav id="navgo" class="start">
-				<a class="btn btn-default btn-lg" href="#aplikasi" style="background-color: transparent; border-color: #28ace5; color: #28ace5">Mulai</a>
+				<a class="btn btn-default btn-lg tombol" href="#aplikasi">Mulai</a>
 			</nav>
-
-			
-			<!--
-			<div class="col-sm-6">
-				<br>
-				<br>
-				Gambar Deskripsi Aplikasi 
-				<div align="center">
-					<img src={{ url_for('static', filename='/images/app-display.JPG') }} height="300" ></img> 
-			</div>-->
 		</div>
 	</div>
 
@@ -80,39 +70,42 @@
 		<br>
 		<br>
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-sm-6 text-center d-flex justify-content-center">
 				</br>
-				<h3 style="text-align: center; ">Upload Gambar </h3>
+				<h3>Upload Gambar</h3>
+					<div class="bgupload">
 					<form class="isian">
+
 						<!-- Input atau Upload Gambar dari Pengguna -->
-						<img src={{ url_for('static', filename='/images/ex-upload.JPG') }} width="300" ></img>
+						<img src={{ url_for('static', filename='/images/ex-upload.JPG') }} width="300" style="margin-top: 2em;"></img>
 						<p>silahkan upload sebuah gambar</p>
-						<p>
-							<input type="file" id="input_gambar" name="file">
-						</p>
+						<div class="row">
+							 <div class="col-md-8 col-md-offset-2">
+								<input type="file" id="input_gambar" name="file" class="form-control">
+							 </div> 
+						</div>
 						</br>
+
 						<!-- Tombol Prediksi -->
-						<button type="submit" id="prediksi_submit" class="btn btn-default btn-lg">Prediksi</button>
+						
 					</form>
+					
+					</div>
+					<button type="submit" id="prediksi_submit" class="btn btn-default btn-lg tombol" >Prediksi</button>
 			</div>
-			<div class="col-sm-6">
-				<br>
-				<form style="margin-left: 50px;">
-					<!-- Input atau Upload Gambar dari Pengguna -->
-					<img src={{ url_for('static', filename='/images/ex-upload.JPG') }} width="300" ></img>
-					<p>silahkan upload sebuah gambar</p>
-					<p>
-						<input type="file" id="input_gambar" name="file">
-					</p>
-					</br>
-					<!-- Tombol Prediksi -->
-					<button type="submit" id="prediksi_submit" class="btn btn-default btn-lg">Prediksi</button>
-				</form>
-				<!-- Bagian Halaman untuk Hasil Prediksi -->
-				<div id="hasil_prediksi" align="center">
-					<!-- Hasil Prediksi akan ditampilkan di sini-->
+
+			<div class="col-sm-6 text-center d-flex justify-content-center">
+				</br>
+				<h3>Hasil</h3>
+				<div class="bgupload">
+					<div class="isian">
+						<div id="hasil_prediksi" align="center">
+							
+						</div>
+					</div>
 				</div>
 			</div>
+			
 		</div>
 		</br>
 		</br>

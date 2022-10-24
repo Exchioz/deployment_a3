@@ -60,6 +60,21 @@ h4 {
 	margin-bottom: 30px;
 }
 
+.bgupload{
+	background-color: #fff;
+	width: 50%;
+	height: 240px;
+	margin-left: 25%;
+	border-radius: 20px;
+}
+
+.col-center-block {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    /* margin-left: auto; margin-right: auto; */
+}
+
 h5 {
 	font-size: 40px;
 	line-height: 1.375em;
@@ -136,6 +151,18 @@ h5 {
 	text-align: justify;
 }
 
+.scrollspy-example{
+	margin-top: 2em;
+	margin-bottom: 13em;
+}
+
+.tombol{
+	margin-top: 2em;
+	background-color: transparent;
+	border-color: #28ace5;
+	color: #28ace5;
+}
+
 .navbar li a, .navbar .navbar-brand {
 	color: #28ace5 !important;
 }
@@ -164,6 +191,14 @@ footer .glyphicon {
 
 .slideanim {
 	visibility:hidden;
+}
+
+.container-table {
+    display: table;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .slide {
