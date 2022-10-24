@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Judul Halaman -->
+	<title>Alphazero 3</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='/images/icon.ico') }}">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/bootstrap.min.css') }} type="text/css">
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/client_side.css') }}  type="text/css">
+</head>
+
+<body id="halamanku" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			
+			<!-- Logo -->
+			<div class="navbar-header">
+				<img src={{ url_for('static', filename='/images/logo_a3.png') }} alt="Orbit Logo" 
+				width="50" height="50" align="left">
+				<a class="navbar-brand" href="#halamanku">&#160; Alphazero 3</a>
+			</div>
+			
+			<!-- Daftar Halaman -->
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#informasi">INFORMASI</a></li>
+					<li><a href="#aplikasi">APLIKASI</a></li>
+					<li><a href="#anggotakelompok">ANGGOTA KELOMPOK</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Bagian Halaman (Informasi) -->
+	<div id="informasi" class="container-fluid">
+		<br>
+		<br>
+		<div class="roww">
+
+			<h2>CIC</h2>
+			<h4>Cifar-10 Image Classification</h4><br>
+			<p style="text-align: center;">
+				Aplikasi ini dibuat khusus untuk mendeteksi sebuah objek dari gambar yang diberikan.
+				Adapun dataset yang digunakan untuk model klasifikasi gambar ini adalah CIFAR-10. 
+				Pada dataset CIFAR-1, terdapat 10 objek yang dapat diklasifikasi yaitu pesawat, mobil, burung, kucing,
+				rusa, anjing, katak, kuda, kapal, dan truk.
+				Untuk dapat menggunakan aplikasi ini, pengguna hanya mengunggah sebuah gambar dengan format 'JPG'. 
+				Hasil deteksi objek akan ditampilkan setelah pengguna mengunggah gambar tersebut.
+			</p>
+			
+			<br>
+			<!-- Tombol Mulai -->
+			<nav id="navgo" class="start">
+				<a class="btn btn-default btn-lg" href="#aplikasi" style="background-color: transparent; border-color: #28ace5; color: #28ace5">Mulai</a>
+			</nav>
+
+			
+			<!--
+			<div class="col-sm-6">
+				<br>
+				<br>
+				Gambar Deskripsi Aplikasi 
+				<div align="center">
+					<img src={{ url_for('static', filename='/images/app-display.JPG') }} height="300" ></img> 
+			</div>-->
+		</div>
+	</div>
+
+
+	<!-- Bagian Halaman (Aplikasi) -->
+	<div id="aplikasi" data-bs-spy="scroll" data-bs-target="#navgo" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				</br>
+				<h3 style="text-align: center; ">Upload Gambar </h3>
+					<form class="isian">
+						<!-- Input atau Upload Gambar dari Pengguna -->
+						<img src={{ url_for('static', filename='/images/ex-upload.JPG') }} width="300" ></img>
+						<p>silahkan upload sebuah gambar</p>
+						<p>
+							<input type="file" id="input_gambar" name="file">
+						</p>
+						</br>
+						<!-- Tombol Prediksi -->
+						<button type="submit" id="prediksi_submit" class="btn btn-default btn-lg">Prediksi</button>
+					</form>
+			</div>
+			<div class="col-sm-6">
+				<br>
+				<form style="margin-left: 50px;">
+					<!-- Input atau Upload Gambar dari Pengguna -->
+					<img src={{ url_for('static', filename='/images/ex-upload.JPG') }} width="300" ></img>
+					<p>silahkan upload sebuah gambar</p>
+					<p>
+						<input type="file" id="input_gambar" name="file">
+					</p>
+					</br>
+					<!-- Tombol Prediksi -->
+					<button type="submit" id="prediksi_submit" class="btn btn-default btn-lg">Prediksi</button>
+				</form>
+				<!-- Bagian Halaman untuk Hasil Prediksi -->
+				<div id="hasil_prediksi" align="center">
+					<!-- Hasil Prediksi akan ditampilkan di sini-->
+				</div>
+			</div>
+		</div>
+		</br>
+		</br>
+		</br>
+		</br>
+	</div>
+
+
+	<div id="anggotakelompok" class="roww">
+		<br>
+		<br>
+		<br>
+		<br>
+		<h2>Alphazero 3</h2>
+		<h4>Tim Deployment dan Tim CV</h4>
+	</div>
+	
+	<!-- Bagian Halaman (Anggota Kelompok) -->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+		  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		  <li data-target="#myCarousel" data-slide-to="1"></li>
+		  <li data-target="#myCarousel" data-slide-to="2"></li>
+		  <li data-target="#myCarousel" data-slide-to="3"></li>
+		</ol>
+	  
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+		  <div class="item active">
+			<img src={{ url_for('static', filename='/images/yuni.png') }} alt="Yuni">
+			<div class="carousel-caption d-none d-md-block slidetext">
+			  	<h3>Siti Wahyuni</h3>
+			  	<p style="font-weight: bold;">Sistem Informasi - STMIK Bandung</p>
+			  	<p style="font-size: 15px; text-align: justify;">
+					Hallo! Panggil saya Yuni ya, saya dari kampus STMIK Bandung prodi Sistem Informasi. Saat ini saya sedang mengikuti
+                	Kampus Merdeka Batch 3 pada Mitra Orbit Future Academy AI Mastery Program. Dalam program ini saya telah banyak belajar tentang AI Fundamental dan juga AI Domain.
+        	    	Saya sangat berharap ilmu yang telah didapatkan akan berguna nantinya ketika telah selesai menjalankan Program Study Independet ini. See you!
+			  	</p>
+			</div>
+		  </div>
+	  
+		  <div class="item">
+			<img src={{ url_for('static', filename='/images/dmitri.png') }} alt="Chicago">
+			<div class="carousel-caption d-none d-md-block slidetext">
+			  	<h3>Dmitri Naufal Ghani</h3>
+			  	<p style="font-weight: bold;">Fisika - Universitas Pendidikan Indonesia</p>
+			  	<p style="font-size: 15px; text-align: justify;">
+					Hallo guys. Perkenalkan saya Dmitri Naufal Ghani, seorang mahasiswa program studi Fisika Universitas Pendidikan Indonesia (UPI) angkatan 2019.
+					Saya memiliki ketertarikan terhadap dunia sains. Oleh karena itu Saya sedang mengikuti kegiatan studi independen batch 3 bermitra dengan Orbit Future Academy pada program AI Mastery Program.
+					Di sini Saya banyak belajar pengetahuan yang berkaitan dengan AI seperti AI Fundamental dan domain-domain AI yang terdiri dari data science, computer vision, natural language processing, dan reinforcement learning.
+				</p>
+			</div>
+		  </div>
+	  
+		  <div class="item">
+			<img src={{ url_for('static', filename='/images/erlia.png') }} alt="Erlia">
+			<div class="carousel-caption d-none d-md-block slidetext">
+			  	<h3>Erlia Wiky Rohani S</h3>
+			  	<p style="font-weight: bold;">Fisika - Universitas Pendidikan Indonesia</p>
+				<p style="font-size: 15px; text-align: justify;">
+					Hi, Nama saya Erlia Wiky Rohani Simatupang. Bisa dipanggil Erlia, saya berasal dari kampus Universitas Pendidikan Indonesia di Bandung.
+					Program studi yang saya ambil ialah Fisika. Saat ini saya sedang mengikuti kegiatan Kampus Merdeka Batch 3 pada Mitra Orbit Future Academy AI Mastery Program.
+					Pada program ini, belajar tentang AI Fundamental dan juga AI Domain.
+				</p>
+			</div>
+		  </div>
+
+		  <div class="item">
+			<img src={{ url_for('static', filename='/images/ivan.png') }} alt="Ivan">
+			<div class="carousel-caption d-none d-md-block slidetext">
+			  	<h3>Ivan Rajwa Naufal</h3>
+			  	<p style="font-weight: bold;">Teknik Komputer - Universitas Pendidikan Indonesia</p>
+				<p style="font-size: 15px; text-align: justify;">
+					Halo semua perkenalkan nama saya Ivan Rajwa Naufal atau bisa juga dipanggil Ivan.
+					Saya sedang berkuliah di Universitas Pendidikan Indonesia dengan Program Studi Teknik Komputer.
+					Pada Semester 5 ini, saya mengikuti kegiatan dari KEMENDIKBUDRISTEK yaitu program MSIB.
+					Saya mengikut program Studi Independent yang diadakan oleh Orbit Future Academy dengan program AI Mastery Program.
+				</p>
+			</div>
+		  </div>
+		</div>
+	  
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		  <span class="glyphicon glyphicon-chevron-left"></span>
+		  <span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">
+		  <span class="glyphicon glyphicon-chevron-right"></span>
+		  <span class="sr-only">Next</span>
+		</a>
+	  </div>
+	
+	<!-- Footer -->
+	<footer class="footer container-fluid text-center">
+		<a href="#halamanku" title="To Top">
+			<span class="glyphicon glyphicon-chevron-up"></span>
+		</a>
+		<p>Orbit Future Academy <br> <a href="https://orbitfutureacademy.id/">orbitfutureacademy.id</a></p>
+	</footer>
+
+	<!-- JavaScript -->
+	<script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
+	<script src={{ url_for('static', filename='/js/bootstrap_3.4.1.min.js') }} ></script>
+	<script src={{ url_for('static', filename='/js/client_side.js') }}></script>
+	
+
+</body>
+</html>
